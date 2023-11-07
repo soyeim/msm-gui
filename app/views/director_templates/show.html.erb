@@ -6,49 +6,38 @@
   Go back
 </a>
 
+<div>
+  <a href="/delete_director/<%= @the_director.id %>">Delete director</a>
+</div>
+
 <hr>
 
-<form action="/insert_director" method="post">
+<form action="/modify_director/<%= @the_director.id %>" method="post">
   <div>
-    <label for="name_box">
-      Name
-    </label>
-
-    <input type="text" id="name_box" name="query_name">
+    <label for="name_field">Name</label>
+    <input id="name_field" type="text" name="name" value = "<%= @the_director.name %>">
   </div>
 
   <div>
-    <label for="dob_box">
-      Dob
-    </label>
-
-    <input type="date" id="dob_box" name="query_dob">
+    <label for="year_field">Dob</label>
+    <input id="year_field" type="date" name="dob" value = "<%= @the_director.dob %>">
   </div>
 
   <div>
-    <label for="bio_box">
-      Bio
-    </label>
-
-    <textarea id="bio_box" name="query_bio" rows="3"></textarea>
+    <label for="duration_field">Bio</label>
+    <input id="duration_field" type="text" name="bio" value = "<%= @the_director.bio %>">
   </div>
 
   <div>
-    <label for="image_box">
-      Image
-    </label>
-
-    <input type="text" id="image_box" name="query_image">
+    <label for="image_field">Image</label>
+    <input id="image_field" type="text" name="image" value = "<%= @the_director.image %>">
   </div>
 
   <button>
-    Create director
-  </button>
+    Update director
+</button>
 </form>
 
-</hr>
-
-<hr>
 
 <dl>
   <dt>

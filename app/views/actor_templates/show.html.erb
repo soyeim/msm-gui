@@ -6,6 +6,38 @@
   Go back
 </a>
 
+<div>
+  <a href="/delete_actor/<%= @the_actor.id %>">Delete actor</a>
+</div>
+
+<hr>
+
+<form action="/modify_actor/<%= @the_actor.id %>" method="post">
+  <div>
+    <label for="name_field">Name</label>
+    <input id="name_field" type="text" name="name" value = "<%= @the_actor.name %>">
+  </div>
+
+  <div>
+    <label for="year_field">Dob</label>
+    <input id="year_field" type="date" name="dob" value = "<%= @the_actor.dob %>">
+  </div>
+
+  <div>
+    <label for="duration_field">Bio</label>
+    <input id="duration_field" type="text" name="bio" value = "<%= @the_actor.bio %>">
+  </div>
+
+  <div>
+    <label for="image_field">Image</label>
+    <input id="image_field" type="text" name="image" value = "<%= @the_actor.image %>">
+  </div>
+
+  <button>
+    Update actor
+  </button>
+</form>
+
 <hr>
 
 <dl>
